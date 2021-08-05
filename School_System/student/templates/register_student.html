@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <style>
+        .pic{
+            margin: auto;
+            display: block;
+        }
+        #styleform{
+          padding-top: 5%;
+          margin-left: 30%;
+          width: 50%;
+          padding: 2%;
+          margin-bottom: 2%;
+          background-color: whitesmoke;
+          color: black;
+        }
+        input{
+            width: 550px;
+        }
+        select{
+            width: 550px;
+        }
+        .heading{
+            color: red;
+        }
+        
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
@@ -12,15 +36,12 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body class="p-3 mb-2 bg-secondary text-white">
-    <form method="POST">
-        <div class="cen">
-            <div class="col-md-10 col-md-offset-1">
-                <h1 style="text-align: center;">Student Registration Forms</h1>
-                <form method="POST" style="margin-left: 100%;">
-                    <div style="width: 100px;">
-                        {{form.as_p}}
-                    </div>
-                </form>
+    <form method="POST" id="styleform">
+        <img class="pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKmePKomfw_hyrnW_BC0ejEt0RmBR7bAh0-Q&usqp=CAU">
+        <h1 style="text-align: center;" class="heading">Student Registration Form</h1>
+                <hr>
+                {{form.as_p}}
+            </form>
 </body>
 
 </html>
