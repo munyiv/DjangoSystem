@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import CalenderForm
 from django.shortcuts import render
 from .models import Calender
@@ -49,6 +49,25 @@ def get_date(req_day):
         year, month = (int(x) for x in req_day.split('-'))
         return date(year, month, day=1)
     return datetime.today()
+
+
+def calender_profile(request,id):
+    calender=Calender.objects.get(id=id)
+    return render(request,"calender_profile.html",{"calender":calender})
+
+def edit_calender(request,id):
+    calender=Calender.objects.get(id=id)
+    if request.method == "POST":
+        form=CalenderForm(request.POST, instance=calender)
+        if form.is_valid():
+            form.save()
+        return redirect("trainer_profile",id=calender.id)
+    else:
+        form=CalenderForm(instance=calender)
+        return render(request,"edit_calender.html",{"form":form})
+
+
+
 
 
 

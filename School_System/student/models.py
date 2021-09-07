@@ -17,9 +17,9 @@ class Student(models.Model):
         max_length=15 , choices=nationality
     ,null=True)
     gender=(
-        ('1','Female'),
-        ('2','Male'),
-        ('3','Other'),
+        ('Female','Female'),
+        ('Male','Male'),
+        ('Other','Other'),
     )
     gender=models.CharField(max_length=15,choices=gender, null=True)
     guardian_name=models.CharField(max_length=12,null=True)
@@ -27,10 +27,10 @@ class Student(models.Model):
     county=models.CharField(max_length=15,null=True)
     image=models.ImageField(upload_to ="images/",null=True)
     languages=(
-        ('1','English'),
-        ('2','Swahili'),
-        ('3','French'),
-        ('4','Kinyaruanda'),
+        ('English','English'),
+        ('Swahili','Swahili'),
+        ('French','French'),
+        ('Kinyarwanda','Kinyaruanda'),
     )
     languages=models.CharField(max_length=15,choices=languages,null=True)
     date_of_enrollement=models.DateField(null=True)

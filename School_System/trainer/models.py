@@ -16,9 +16,9 @@ class Trainer(models.Model):
         max_length=15 , choices=nationality
     ,null=True)
     gender=(
-        ('1','Female'),
-        ('2','Male'),
-        ('3','Other'),
+        ('Female','Female'),
+        ('male','Male'),
+        ('Other','Other'),
     )
     gender=models.CharField(max_length=15,choices=gender)
     email_adress=models.EmailField(null=True)
@@ -28,9 +28,14 @@ class Trainer(models.Model):
     contract=models.FileField(upload_to="documents/",null=True)
     date_hired=models.DateField(null=True)
     languages=(
-        ('1','English'),
-        ('2','Swahili'),
-        ('3','French'),
-        ('4','Kinyaruanda'),
+        ('English','English'),
+        ('Swahili','Swahili'),
+        ('French','French'),
+        ('Kinyarwanda','Kinyaruanda'),
     )
     languages=models.CharField(max_length=15,choices=languages,null=True)
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+    
+    

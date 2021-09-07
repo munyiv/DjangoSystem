@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Trainer's Data</title>
     <style>
-        .title{
-            text-align: center;
-            color: purple;
-        }
-    #table{
-        width: 100%;
+              #table{
+            width: 100%;
       }
       #table td, #table th {
           border: 1px solid #ddd;
@@ -26,11 +22,13 @@
             background-color: purple;
             color: white;
         }
+        .title{
+            text-align: center;
+            color: purple;
+        }
         #picha{
             width: 100%;
-
         }
-  </style>
     </style>
 </head>
 <body>
@@ -41,14 +39,17 @@
         <th>Last_name</th>
         <th>Age</th>
         <th>National_id</th>
-        <th>Nationality</th>
+        <!-- <th>Nationality</th> -->
         <th>Gender</th>
         <th>County</th>
         <th>Bio</th>
-        <!-- <th>Contract</th> -->
         <th>Date_hired</th>
-        <th>Languages</th> 
+        <!-- <th>Languages</th>  -->
+        <th>Images</th> 
         <th>Profile</th> 
+        <th>Edit</th> 
+
+
 
     </tr>     
    
@@ -58,16 +59,22 @@
         <td> {{trainer.last_name}}</td>
         <td> {{trainer.age}}</td>
         <td> {{trainer.national_id}}</td>
-        <td> {{trainer.nationality}}</td>
+        <!-- <td> {{trainer.nationality}}</td> -->
         <td> {{trainer.gender}}</td>
         <td> {{trainer.county}}</td>
         <td> {{trainer.bio}}</td> 
-        <!-- <td> {{trainer.contract}}</td> -->
         <td> {{trainer.date_hired}}</td>
-        <td> {{trainer.languages}}</td>
+        <!-- <td> {{trainer.languages}}</td> -->
         {% if trainer.image %}
-        <td> <img class="picha"src="{{trainer.image.url}}"></td>
+        <td> <img class="picha" src="{{trainer.image.url}}"></td>
         {% endif %}
+        <td>
+            <a href="{% url 'trainer_profile' id=trainer.id%}"> Profile</a>
+        </td>
+        <td>
+            <a href="{% url 'edit_trainer' id=trainer.id%}"> Edit</a>
+        </td>
+
 
     </tr>
     {% endfor %}

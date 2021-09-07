@@ -31,17 +31,23 @@
 </head>
 <body>
 
-    <h1 class="heading">Student's Profile</h1>
+    <h1 class="heading">Courses Profile</h1>
     <section class=" profile">
     <div class="container">
-    <h2>{{student.full_name}}</h2>
-    {% if student.image %}
-    <h2> <img id="picha"src="{{student.image.url}}" width="200" height="200" ></h2>
-    {% endif%}
-    <h5>You were born in {{student.date_of_birth}} </h2>
-    <h5>You are {{student.age}} years old</h2>
-    <h5>Your national ID number is {{student.national_id}} </h2>
-    <h5>You are {{student.nationality}} </h2>
+    {% if courses.image %}
+    <h2> <img id="picha"src="{{course.image.url}}" width="200" height="200" ></h2>
+    {% endif%} 
+    <h5>{{courses.course_name}} </h2>
+    <h5> {{courses.course_code}}</h2>
+    <h5>{{courses.course_schedule}} </h2>
+    <h5>{{courses.syllabus}} </h2>
+    <h5>{{courses.course_trainer}} </h2>
+    <h5>{{courses.course_duration}} </h2>
+
+     
+
+
+
     </div>
     </section>
    
