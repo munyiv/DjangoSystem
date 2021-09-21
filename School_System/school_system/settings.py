@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'courses',
     'calender',
     'core',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

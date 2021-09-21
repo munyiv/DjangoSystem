@@ -7,7 +7,10 @@
     <title>Student Date</title>
     <style>
         body{
-            background-color: rgb(247, 240, 240);
+            background-color: rgb(199, 173, 173);
+
+
+            /* background-color: rgb(247, 240, 240); */
             justify-content: center;
         }
         .profile{
@@ -22,11 +25,13 @@
             width: 100%;
         }
         .container{
-            padding: 2px 16px;       
-         }
+            padding: 2px 16px; 
+            background-color: rgb(247, 240, 240);
+        }
          .heading{
             text-align: center;
          }
+
     </style>
 </head>
 <body>
@@ -35,14 +40,14 @@
     <section class=" profile">
     <div class="container">
     {% if courses.image %}
-    <h2> <img id="picha"src="{{course.image.url}}" width="200" height="200" ></h2>
+    <h2> <img id="picha"src="{{courses.image.url}}" width="200" height="200" ></h2>
     {% endif%} 
-    <h5>{{courses.course_name}} </h2>
-    <h5> {{courses.course_code}}</h2>
-    <h5>{{courses.course_schedule}} </h2>
-    <h5>{{courses.syllabus}} </h2>
-    <h5>{{courses.course_trainer}} </h2>
-    <h5>{{courses.course_duration}} </h2>
+    <h3>{{courses.course_name}} </h3>
+    <h3> {{courses.course_code}}</h3>
+    <h3>{{courses.course_schedule}} </h3>
+    <h3>{{courses.syllabus}} </h3>
+    <h3>{{courses.course_trainer}} </h3>
+    <h3>{{courses.course_duration}} </h3>
 
      
 
