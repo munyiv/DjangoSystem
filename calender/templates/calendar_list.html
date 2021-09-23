@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+
+        .title{
+            text-align: center;
+            color: purple;
+        }
+        #table{
+        width: 100%;
+      }
+        #table td, #table th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        #table tr:nth-child(even){background-color: #f2f2f2;}
+        #table tr:hover {background-color: #ddd;}
+        #table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: purple;
+            color: white;
+          }
+        .calendar {
+            width: 80%;
+            margin: auto;
+            font-size: 13px;
+          }
+
+         .calendar tr, .calendar td {
+            border: 1px solid black;
+          }
+          .calendar th {
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+          }
+          .calendar td {
+            width: 200px;
+            height: 100px;
+            padding: 20px 0px 0px 5px;
+          }
+          .month {
+            font-size: 55px
+          }
+          .date {
+            font-size: 17px
+          }
+          ul {
+            height: 100%;
+            padding: 0px 5px 0px 20px;
+          }
+          a {
+            color: #17a2b8;
+          }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Event Schedule</h1>
+    <table id="table">
+
+        <!-- <tr>
+        <th>Event_venue</th>
+        <th>Event_id</th>
+        <th>Event_name</th>
+        <th>Event_duration</th>
+        <th>Event_planner</th>
+        <th>Event_participants</th>
+        <th>Event_day</th>
+    </tr>      -->
+   
+    {% for calendar in calendar%}
+    <tr>
+        <!-- <td> {{calendar.venue}}</td>
+        <td> {{calendar.event_id}}</td>
+        <td> {{calendar.event_name}}</td>
+        <td> {{calendar.event_duration}}</td>
+        <td> {{calendar.event_planner}}</td>
+        <td> {{calendar.event_participants}}</td>
+        <td> {{calendar.event_day}}</td> -->
+    </tr>
+    {% endfor %}
+</table>
+{{ calendar }}
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender title>
+    <style>
+        
+        body{
+            background-color: rgb(247, 240, 240);
+            justify-content: center;
+        }
+        .profile{
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            justify-content: center;
+            margin-left: 400px;
+        }
+        .picha{
+            width: 100%;
+        }
+        .container{
+            padding: 2px 16px;       
+         }
+         .heading{
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading">Calender Profile</h1>
+    <section class=" profile">
+    <div class="container">
+    <!-- <h2>{{student.full_name}}</h2>
+    {% if student.image %}
+    <h2> <img id="picha"src="{{student.image.url}}" width="200" height="200" ></h2>
+    {% endif%} -->
+    <h5>{{calender.venue}} </h5>
+    <h5>{{calender.event_name}}</h5>
+    <h5>{{calender.event_participants}} </h5>
+    <h5>{{calender.event_planner}} </h5>
+    </div>
+    </section>
+   
+
