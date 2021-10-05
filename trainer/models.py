@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class Trainer(models.Model):
@@ -37,5 +38,10 @@ class Trainer(models.Model):
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
+    
+    def year_of_birth(self):
+        current_year=datetime.datetime.now().year
+        year= current_year
+        return year -self.age
     
     

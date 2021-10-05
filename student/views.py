@@ -8,7 +8,6 @@ def register_student(request):
         form =StudentRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('register_student')
         else:
             print(form.errors)
     else:

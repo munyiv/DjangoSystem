@@ -1,19 +1,22 @@
 from django.shortcuts import redirect, render
+from django.urls.base import reverse
 from .forms import TrainersForm
 from django.shortcuts import render
 from .models import Trainer
 
 
-def register_student(request):
+def register_trainer(request):
     if request.method == "POST":
         form =TrainersForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
+            return redirect(reverse('register_trainer'))
         else:
             print(form.errors)
     else:
         form=TrainersForm()
     return render (request,"trainer.html",{"form":form})
+
 
 def trainers_list(request):
     trainers=Trainer.objects.all()

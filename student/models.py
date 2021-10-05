@@ -8,10 +8,10 @@ class Student(models.Model):
     date_of_birth=models.DateField(blank=True,null=True)
     national_id=models.CharField(max_length=20,null=True)
     nationality=(
-        ('1','Kenyan'),
-        ('2','Rwandan'),
-        ('3','SouthSudanese'),
-        ('4','Ugandan'),
+        ('Kenyan','Kenyan'),
+        ('Rwandan','Rwandan'),
+        ('S.Sudanese','SouthSudanese'),
+        ('Ugandan','Ugandan'),
     )
     nationality=models.CharField(
         max_length=15 , choices=nationality

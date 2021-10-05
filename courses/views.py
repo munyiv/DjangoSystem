@@ -3,7 +3,7 @@ from .forms import CoursesForm
 from django.shortcuts import render
 from .models import Courses
 
-def register_student(request):
+def register_course(request):
     if request.method == "POST":
         form =CoursesForm(request.POST)
         if form.is_valid():

@@ -10,7 +10,7 @@ from datetime import date
 
 
 
-def register_student(request):
+def register_calender(request):
     if request.method == "POST":
         form =CalenderForm(request.POST)
         if form.is_valid():
