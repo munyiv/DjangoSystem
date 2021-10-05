@@ -63,9 +63,11 @@
         <td> {{student.guardian_name}}</td>
         <td> {{student.email_adress}}</td>
         <td> {{student.county}}</td>
+
         {% if student.image %}
         <td> <img id="picha"src="{{student.image.url}}"></td>
         {% endif %}
+        
         <td>
             <a href="{% url 'student_profile' id=student.id%}"> Profile</a>
         </td>
