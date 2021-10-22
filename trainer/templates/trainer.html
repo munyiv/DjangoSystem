@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
     *{
        margin: 0;
        padding: 0;
@@ -66,8 +66,75 @@
         }
         #color{
             background-color: rgb(199, 185, 185);
-        }
-        
+        } */
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+    *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Josefin Sans', sans-serif;
+   }
+
+    .navbar{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 25px 0;
+   }
+   .navbar .logo{
+       width: 150px;
+   }
+   .navbar .logo img{
+       width: 100%;
+   }
+   .navbar .links ul{
+       list-style: none;
+       display: flex;
+   }
+   .navbar .links ul li{
+       margin-left: 90px;
+   }
+   .navbar .links ul li a{
+       text-decoration: none;
+       color: purple;
+       font-size: 18px;
+   }
+   .navbar .links ul li a:hover{
+       color:rgb(223, 120, 137);
+   }
+   .pic{
+       margin: auto;
+       display: block;
+    }
+    #styleform{
+        padding-top: 5%;
+        margin-left: 30%;
+        width: 50%;
+        padding: 2%;
+        margin-bottom: 2%;
+        /* background-color: whitesmoke; */
+        background-color: rgb(182, 168, 182);
+        color: black;
+    }
+    input{
+        width: 550px;
+    }
+    select{
+        width: 550px;
+    }
+    .heading{
+        /* color:purple; */
+        color: black;
+    }
+    .btn{
+        width: 200px;
+        font-size:16px;
+        color: purple;
+    }
+    #color{
+        /* background-color: rgb(199, 185, 185); */
+        background-color: whitesmoke;
+    }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
